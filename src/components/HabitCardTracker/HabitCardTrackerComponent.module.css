@@ -1,0 +1,76 @@
+
+
+
+
+.habit-card{
+    width           : 100%;
+    height          : 240px;
+    background-color: #1c1c1e;
+    border-radius   : 15px;
+    padding         : 10px 10px;
+    display         : flex;
+    flex-direction  : column;
+}
+
+.habit-card__header{
+    display         : flex;
+    justify-content : center;
+}
+
+.habit-card__header-icon{
+    width           : 50px;
+    height          : 50px;
+    border-radius   : 10px;
+    padding         : 5px;
+}
+
+
+.habit-card__text{
+    margin-left     : 10px;
+    margin-top      : 2px;
+    display         : flex;
+    flex-direction  : column;
+}
+.habit-card__header-title{
+    font-size       : 18px !important;
+    margin-bottom   : 0 !important;
+    color           : white !important;
+}
+.habit-card__header-description{
+    font-size   : 12px !important;
+    margin-top  : 0 !important;
+    color       : white !important ;
+}
+
+.habit-card__check{
+    width           : 50px;
+    height          : 50px;
+    border-radius   : 10px;
+    padding         : 5px;
+    background-color: rgba(52, 211, 153, 0.3);
+    margin-left     : auto
+}
+
+.check{
+    background-color: rgba(52, 211, 153, 1);  
+}
+
+.habit-card__tracker{
+    width           : 100%;
+    height          : 100%;
+    margin-top      : 10px;
+    border-radius   : 10px;
+    display         : flex;
+    flex-wrap       : wrap;
+    align-content   : flex-start;
+    
+}
+
+.habit-card__tracker-habit-check{
+    width           : 14.5px;
+    height          : 14.5px;
+    background-color: rgba(52, 211, 153, 0.3);
+    margin-top      : 5px;
+    margin-right    : 2px;
+    border-radius   : 5px;
+}

@@ -1,0 +1,69 @@
+
+[
+    {
+
+        "id"          : "1",
+        "title"       : "React",
+        "description" : "Estudiar React 1 hora",
+        "color"       : "#d8f9e3",
+        "complete"    : false,
+        "notas"       : "",
+        "icon"        : "vscode-icons:file-type-reactjs"
+    },
+    {
+
+        "id"          : "2",
+        "title"       : "Leer",
+        "description" : "Leer 1 hora",
+        "color"       : "#d8f9e3",
+        "complete"    : false,
+        "notas"       : "",
+        "icon"        : "flat-color-icons:kindle"
+    
+    },
+    {
+
+        "id"          : "3",
+        "title"       : "Meditar",
+        "description" : "Meditar 1 hora",
+        "color"       : "#d8f9e3",
+        "complete"    : false,
+        "notas"       : "",
+        "icon"        : "flat-color-icons:portrait-mode"
+    
+    },
+    {
+
+        "id"          : "4",
+        "title"       : "Code",
+        "description" : "Resolver 1 code challenge",
+        "color"       : "#d8f9e3",
+        "complete"    : false,
+        "notas"       : "",
+        "icon"        : "flat-color-icons:command-line"
+    
+    },
+    {
+
+        "id"          : "5",
+        "title"       : "Tomar agua",
+        "description" : "tomar 2 litros de agua",
+        "color"       : "#d8f9e3",
+        "complete"    : true,
+        "notas"       : "",
+        "icon"        : "flat-color-icons:biomass"
+    
+    },
+    {
+
+        "id"          : "7",
+        "title"       : "JavaScript",
+        "description" : "Estudiar Javascript 1 hora",
+        "color"       : "#d8f9e3",
+        "complete"    : false,
+        "notas"       : "",
+        "icon"        : "skill-icons:javascript"
+    
+    }
+
+]

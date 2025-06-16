@@ -49,7 +49,7 @@ This project is built with:
 
 ## 👤 Author
 
-Made with 💻 and ☕ by [zXAZURIANXz](https://github.com/zXAZURIANXz)
+Made with 💻 and ☕ by [zXAZURIANXz](https://github.com/zXAZURIANXz) , <That´s my shinoby way />
 
 ---
 

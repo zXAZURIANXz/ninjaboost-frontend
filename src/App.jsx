@@ -17,7 +17,7 @@ function App() {
     <>
     	<Router>
       	<NavBar />
-      	<Layout style={{ padding: '15px', backgroundColor: '#000000', height:'100vh' }}>
+      	<Layout style={{ padding: '15px', backgroundColor: '#000000' }}>
           <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/newHabit" element={<NewHabit />} />

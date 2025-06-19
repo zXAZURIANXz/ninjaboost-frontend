@@ -39,17 +39,15 @@ npm run dev
 
 ## 🧪 Coming Soon
 
-This project is built with:
-
 - 🌙 Dark mode
 - ☁️ User accounts & cloud sync 
 - 🗓️ Calendar view
 
 ---
 
-## 👤 Author
+## 👨🏻‍💻 Author
 
-Made with 💻 and ☕ by [zXAZURIANXz](https://github.com/zXAZURIANXz) , <That´s my shinoby way />
+Made with 💻 and ☕ by [zXAZURIANXz](https://github.com/zXAZURIANXz) , <That´s my shinoby way /> 🍥
 
 ---
 

@@ -17,7 +17,7 @@ function App() {
     <>
     	<Router>
       	<NavBar />
-      	<Layout style={{ padding: '15px', backgroundColor: '#000000' }}>
+      	<Layout style={{ padding: '15px', backgroundColor: '#000000', height:'100%' }}>
           <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/newHabit" element={<NewHabit />} />
@@ -25,7 +25,6 @@ function App() {
       	</Layout>
       </Router>
     </>
-
   )
 }
 

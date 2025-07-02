@@ -15,7 +15,6 @@ export const getIconService = (iconName:string) => {
 			console.log(err)
 		})
 		.finally(function () {
-			// do something
 		})
 
 }

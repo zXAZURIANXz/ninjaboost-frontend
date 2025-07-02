@@ -7,6 +7,7 @@
     padding         : 10px 10px;
     display         : flex;
     flex-direction  : column;
+		margin: 15px 0 15px 0;
 }
 
 .habit-card__header{
@@ -39,6 +40,14 @@
     color       : white !important ;
 }
 
+.habit-card__daily-streak{
+	color					: white;
+	align-self		: flex-end;
+  margin-top		: 10px;
+	margin-bottom : 0px;
+	
+}
+
 .habit-card__check{
     width           : 50px;
     height          : 50px;
@@ -60,7 +69,7 @@
     display         : flex;
     flex-wrap       : wrap;
     align-content   : flex-start;
-		overflow				: hidden;
+		overflow				: auto;
     
 }
 

@@ -38,8 +38,6 @@ export const HabitCardTrackerComponent = ({title,description,color,icon}) => {
     setIsChecked(!isChecked);
     console.log(isChecked);
 
-
-
     //checar todos los divs
 
   }
@@ -62,8 +60,8 @@ export const HabitCardTrackerComponent = ({title,description,color,icon}) => {
                 <Icon icon={icon} color="white" width="40" height="40" />
             </div>
             <div className={style['habit-card__text']}>
-                <Title className={style['habit-card__header-title']} level={4}> {title}</Title>
-                <Title className={style['habit-card__header-description']} level={5}> {description} </Title>
+                <Title className={style['habit-card__header-title']} level={4}> {title || 'Enter the title of your new habit'}</Title>
+                <Title className={style['habit-card__header-description']} level={5}> {description || 'Add details like time, frequency, or motivation'} </Title>
             </div>
             <div className={style['habit-card__check']} style={isChecked ? {backgroundColor:color} : {backgroundColor:darknedColor} } >
                 <Icon icon="material-symbols-light:check" color="white" width="40" height="40" onClick={() => taskDone()} />
@@ -76,8 +74,11 @@ export const HabitCardTrackerComponent = ({title,description,color,icon}) => {
                     <SquareHabitDoneComponent idx={idx} isChecked={habit} />
                 )
             }
+						
         </div>
+				<p className={style['habit-card__daily-streak']} level={5}>Daily Streak : 0 🔥</p>
     </div>
+		
     )
 }
 

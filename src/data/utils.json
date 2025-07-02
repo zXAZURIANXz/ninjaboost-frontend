@@ -8,5 +8,6 @@
         { "label": "Saturday",  "value": "Sat" },
         { "label": "Sunday",    "value": "Sun" }
     ],
-    "iconsApiSearch" : "https://api.iconify.design/search?query="
+    "iconsApiSearch" : "https://api.iconify.design/search?query=",
+		"devUrl" : "http://localhost:3000"
 }

@@ -12,31 +12,23 @@ export const Home = () => {
 	const [habits, setHabits] = useState([]);
 
 	useEffect(() => {
-		
 		getHabits()
 		.then(({ data }) => {
 			console.log(data)
 			setHabits(data);
-		
 		});
-	
 	}, []);
 
   return (
     <div >
-
-
 				{
 					habits.map((habit,idx) => 
-					
-						<HabitCardTrackerComponent title={habit.title} description={habit.description} color={habit.color} icon={habit.icon} />
-					
+						<HabitCardTrackerComponent _id={habit._id} title={habit.title} description={habit.description} color={habit.color} icon={habit.icon} />
 					)
 				}
 				<HabitNotFound />
 			
-      
-    
+
     </div>
   );
 };

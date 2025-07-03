@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import { Typography } from "antd";
 import { Icon } from '@iconify/react';
 import Color from 'color';
+import { completedHabit } from '../../services/habitService';
 
 const { Title } = Typography;
 
-
-export const HabitCardTrackerComponent = ({title,description,color,icon}) => {
-
+export const HabitCardTrackerComponent = ({_id,title,description,color,icon}) => {
+console.log(_id,'<---ID');
   const [isChecked, setIsChecked] = useState(false);
   const [squeareHabit, setSqueareHabit ] = useState(Array(200).fill(false));
 
@@ -19,6 +19,10 @@ export const HabitCardTrackerComponent = ({title,description,color,icon}) => {
 
     setSqueareHabit(preHabits => {
 
+
+			completedHabit(_id)
+			.then((data) => console.log(data))
+			
         const newHabits = [...preHabits];
 
         for (let i = 0; i < newHabits.length; i++) {
@@ -38,7 +42,6 @@ export const HabitCardTrackerComponent = ({title,description,color,icon}) => {
     setIsChecked(!isChecked);
     console.log(isChecked);
 
-    //checar todos los divs
 
   }
 
@@ -64,7 +67,7 @@ export const HabitCardTrackerComponent = ({title,description,color,icon}) => {
                 <Title className={style['habit-card__header-description']} level={5}> {description || 'Add details like time, frequency, or motivation'} </Title>
             </div>
             <div className={style['habit-card__check']} style={isChecked ? {backgroundColor:color} : {backgroundColor:darknedColor} } >
-                <Icon icon="material-symbols-light:check" color="white" width="40" height="40" onClick={() => taskDone()} />
+                <Icon icon="material-symbols-light:check" color="white" width="40" height="40" onClick={() => taskDone(_id)} />
             </div>
         </div>
 

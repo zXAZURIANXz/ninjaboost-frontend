@@ -18,42 +18,31 @@ interface HabitCompleted {
 
 const { devUrl } = utils;
 
-export const createHabitService = (habit:Habit) => {
-
-	return axios.post(`${devUrl}/habits`, habit)
-				 .then(function(response){
-					return response
-				 })
-				 .catch(function(err){
-					console.log(err)
-				 })
-				 .finally(function(){})
-
-}
+export const createHabitService = (habit: Habit) => {
+  return axios.post(`${devUrl}/habits`, habit)
+    .catch(err => {
+      console.error('Error creating habit:', err);
+      throw err;
+    });
+};
 
 export const getHabits = () => {
-	return axios.get(`${devUrl}/habits`)
-				 .then(function(response){
-					return response
-				 })
-				 .catch(function(err){
-					console.log(err)
-				 })
- 				.finally(function(){})
-}
+  return axios.get(`${devUrl}/habits`)
+    .catch((err) => {
+      console.error(err);
+      throw err;
+    });
+};
 
 /* update is completed habit */
 
-export const isCompletedHabitService = (habit:HabitCompleted) => {
+export const isCompletedHabitService = (habit: HabitCompleted) => {
+  console.log(JSON.stringify(habit));
+  console.log(`${devUrl}/habits/complete`);
 
-	console.log(JSON.stringify(habit));
-	console.log(`${devUrl}/habits/complete`);
-	return axios.post(`${devUrl}/habits/complete`, habit)
-				 .then(function(response){
-					return response
-				 })
-				 .catch(function(err){
-					console.log(err)
-				 })
-				 .finally(function(){})
-}
+  return axios.post(`${devUrl}/habits/complete`, habit)
+    .catch(err => {
+      console.error('Error completing habit:', err);
+      throw err;
+    });
+};

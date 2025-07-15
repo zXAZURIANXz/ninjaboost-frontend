@@ -12,51 +12,34 @@ export const Home = () => {
 			title						: string;
 			description 		: string;
 			color						: string;
+			isCompleted			: boolean;
 			completedDates	: string[];
 			icon						: string;
 		}
 
 	const [habits, setHabits] = useState([]);
-	const [days, setDays] = useState([]);
 
 	useEffect(() => {
-		
 		getHabits()
 		.then(({ data }) => {
 			console.log(data)
 			setHabits(data);
-		
 		});
-	
 	}, []);
 
 	const getNumberDay = (completedDates:string[]) =>{
-
-	
-			const x = completedDates.map((dateStr) => dateStr.split("-")[2])
-		
-		
-
-		return x
-
+			const daysDone = completedDates.map((dateStr) => dateStr.split("-")[2])
+			return daysDone
 	}
 
-	//console.log(getNumberDay(),'<.--numero de dias');
-
   return (
-    <div >
-
-
+    <div>
 				{
 					habits.map((habit:Habit,idx) => 
-
-						<HabitCardTrackerComponent _idHabit={habit._id} title={habit.title} description={habit.description} color={habit.color} icon={habit.icon} daysDone={getNumberDay(habit.completedDates)} />
+						<HabitCardTrackerComponent _idHabit={habit._id} title={habit.title} description={habit.description} color={habit.color} icon={habit.icon} daysDone={getNumberDay(habit.completedDates)} isCompleted={habit.isCompleted} />
 					)
 				}
 				<HabitNotFound />
-			
-      
-    
     </div>
   );
 };

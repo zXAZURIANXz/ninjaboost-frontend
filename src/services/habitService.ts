@@ -11,28 +11,38 @@ interface Habit {
 			icon				: string;
 }
 
+interface HabitCompleted {
+		_idHabit		:	String;
+		isCompleted	:	Boolean
+} 
 
-export const createHabitService = (habit:Habit) => {
+const { devUrl } = utils;
 
-	return axios.post(`${utils.devUrl}/habits`, habit)
-				 .then(function(response){
-					return response
-				 })
-				 .catch(function(err){
-					console.log(err)
-				 })
-				 .finally(function(){})
-
-}
+export const createHabitService = (habit: Habit) => {
+  return axios.post(`${devUrl}/habits`, habit)
+    .catch(err => {
+      console.error('Error creating habit:', err);
+      throw err;
+    });
+};
 
 export const getHabits = () => {
+  return axios.get(`${devUrl}/habits`)
+    .catch((err) => {
+      console.error(err);
+      throw err;
+    });
+};
 
-	return axios.get(`${utils.devUrl}/habits`)
-				 .then(function(response){
-					return response
-				 })
-				 .catch(function(err){
-					console.log(err)
-				 })
- 				.finally(function(){})
-}
+/* update is completed habit */
+
+export const isCompletedHabitService = (habit: HabitCompleted) => {
+  console.log(JSON.stringify(habit));
+  console.log(`${devUrl}/habits/complete`);
+
+  return axios.post(`${devUrl}/habits/complete`, habit)
+    .catch(err => {
+      console.error('Error completing habit:', err);
+      throw err;
+    });
+};

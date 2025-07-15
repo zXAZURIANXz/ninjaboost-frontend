@@ -15,13 +15,17 @@
     justify-content : center;
 }
 
+.habit-card__footer{
+	display					: flex;
+	justify-content	: space-between;
+}
+
 .habit-card__header-icon{
     width           : 50px;
     height          : 50px;
     border-radius   : 10px;
     padding         : 5px;
 }
-
 
 .habit-card__text{
     margin-left     : 10px;
@@ -40,9 +44,8 @@
     color       : white !important ;
 }
 
-.habit-card__daily-streak{
+.habit-card__footer-daily-streak , .habit-card__footer-daily-month {
 	color					: white;
-	align-self		: flex-end;
   margin-top		: 10px;
 	margin-bottom : 0px;
 	
@@ -74,10 +77,18 @@
 }
 
 .habit-card__tracker-habit-check{
-    width           : 14.5px;
-    height          : 14.5px;
+    width           : 30px;
+    height          : 30px;
     background-color: rgba(52, 211, 153, 0.3);
     margin-top      : 5px;
     margin-right    : 2px;
     border-radius   : 5px;
+		display					: flex;
+		justify-content	: center;
+		align-items			: center;
+}
+
+.habit-card__tracker-habit-days{
+	color:white;
+	
 }

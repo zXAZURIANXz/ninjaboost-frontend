@@ -79,7 +79,7 @@ export const NewHabit = () => {
     <>
 				{/* notificacion */}
 				{contextHolder} 
-        <HabitCardTrackerComponent title={title} description={description} color={habitColor} icon={iconSelect}/>
+        <HabitCardTrackerComponent title={title} description={description} color={habitColor} icon={iconSelect} _idHabit={undefined} /> 
        
         <h3 className={style['habit-input-title']}>Habit name</h3>
         <Input  placeholder={title} onChange={(e) => setTitle(e.target.value)} />
